@@ -8,3 +8,11 @@ class Airport(models.Model):
 
     def __str__(self):
         return str(self.airport_name + "_" + str(self.air_id))
+
+
+class FlightCompany(models.Model):
+    fli_id = models.IntegerField(primary_key=True, default=100)
+    company_name = models.CharField(max_length=50, null=False)
+
+    def __str__(self):
+        return self.company_name + "_" + str(self.fli_id)

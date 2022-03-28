@@ -4,5 +4,6 @@ from django.urls import path
 from home import views
 urlpatterns = [
     path('', views.index, name='home'),
-    path('airport', views.airport, name='airport')
+    path('airport', views.airport, name='airport'),
+    path('flicompany', views.flicompany, name='flicompany')
 ]
