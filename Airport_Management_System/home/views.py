@@ -2,7 +2,7 @@ from urllib import request
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Airport, FlightCompany
-from .forms import AirportForm, FliCompanyForm, FlightForm
+from .forms import AirportForm, FliCompanyForm, FlightForm, TicketForm
 
 # Create your views here.
 def index(request):
@@ -34,3 +34,12 @@ def flight(request):
         else:
             form = FlightForm()
     return render(request, 'Flight.html')
+
+def ticket(request):
+    if request.method == "POST":
+        form = TicketForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            form = TicketForm()
+    return render(request, 'ticket.html')

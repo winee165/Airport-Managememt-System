@@ -7,4 +7,5 @@ urlpatterns = [
     path('airport', views.airport, name='airport'),
     path('flicompany', views.flicompany, name='flicompany'),
     path('flight', views.flight, name='flight'),
+    path('ticket', views.ticket, name='ticket'),
 ]

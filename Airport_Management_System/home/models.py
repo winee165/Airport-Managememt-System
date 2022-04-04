@@ -25,3 +25,14 @@ class Flight(models.Model):
 
     def __str__(self):
         return str(self.fli_num)
+
+class Ticket(models.Model):
+    seat_class = models.CharField(max_length=10, null=False)
+    pass_name = models.CharField(max_length=50, null=False)
+    fli_num = models.ForeignKey(Flight, on_delete=models.CASCADE, default=1002)
+    price = models.IntegerField(null=False)
+    fli_company = models.ForeignKey(FlightCompany, on_delete=models.CASCADE, default=200)
+    order_number = models.IntegerField(primary_key=True, default=345)
+
+    def __str__(self):
+        return str(self.fli_num) + "_" + self.pass_name
