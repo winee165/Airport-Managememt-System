@@ -5,5 +5,6 @@ from home import views
 urlpatterns = [
     path('', views.index, name='home'),
     path('airport', views.airport, name='airport'),
-    path('flicompany', views.flicompany, name='flicompany')
+    path('flicompany', views.flicompany, name='flicompany'),
+    path('flight', views.flight, name='flight'),
 ]
