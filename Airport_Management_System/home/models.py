@@ -36,3 +36,16 @@ class Ticket(models.Model):
 
     def __str__(self):
         return str(self.fli_num) + "_" + self.pass_name
+
+class Store(models.Model):
+    name = models.CharField(max_length=50, null=False, primary_key=True)
+    type = models.CharField(max_length=50, null=False)
+    pro_type = models.CharField(max_length=50, null=False)
+    air_id = models.ForeignKey(Airport, on_delete=models.CASCADE, default=200)
+    place = models.CharField(max_length=50, null=False)
+
+    def __str__(self):
+        return str(self.name) + "_" + str(self.place)
+   
+
+

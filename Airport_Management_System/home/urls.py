@@ -8,4 +8,5 @@ urlpatterns = [
     path('flicompany', views.flicompany, name='flicompany'),
     path('flight', views.flight, name='flight'),
     path('ticket', views.ticket, name='ticket'),
+    path('store', views.store, name='store'),
 ]
