@@ -229,15 +229,16 @@ header #menu {
 .home {
 
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    flex-flow: column;
-    background: url(/Airport-Managememt-System/Airport_Management_System/Front-end/Images/254367.png) no-repeat;
+    flex-flow: column; 
+    background: url(/Front-end/Images/254367.png) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    text-align: center;
+    font-style: italic;
+
 }
 
 .home h1 {
@@ -248,7 +249,7 @@ header #menu {
 
 .home p {
     font-size: 1.9rem;
-    color: rgb(14, 11, 11);
+    color: white;
     padding: 1rem 0;
     width: 70rem;
 
@@ -394,20 +395,63 @@ header #menu {
 /* course section ends */
 
 /* teacher section begins */
-.teacher {
+.experts .box{
+    width:250px;
+    background:#fff;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    margin:auto;
+    padding:15px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
 }
 
-.teacher p {
-    font-size: 1.8rem;
-    color: #666;
-    width: 65rem;
-    margin: 1rem auto;
+.experts .box img{
+    background:#f8f8fe;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 8px;
 }
 
+.experts .box h3{
+    font-size: 22px;
+    margin:2px 0;
+    color:black;
+}
 
+.experts .box span{
+    font-size: 15px;
+    color:#0a55a6;
+}
 
-/* teacher section ends */
+.experts .box .share{
+    position: absolute;
+    /* top:5px; right: -50px;
+    transition: .2s; */
+}
+
+.experts .box:hover .share{
+    right:15px;
+}
+
+.experts .box .share a{
+    border-radius: 5px;
+    background:#0a55a6;
+    color:#fff;
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    margin-top: 5px;
+}
+
+.experts .box .share a:hover{
+    background:black;
+}
 
 /* contact section */
 .contact {
