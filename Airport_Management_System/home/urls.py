@@ -9,4 +9,7 @@ urlpatterns = [
     path('flight', views.flight, name='flight'),
     path('ticket', views.ticket, name='ticket'),
     path('store', views.store, name='store'),
+    path('worker', views.worker, name='worker'),
+    path('supplier', views.supplier, name='supplier'),
+
 ]

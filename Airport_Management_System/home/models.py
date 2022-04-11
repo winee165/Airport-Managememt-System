@@ -46,6 +46,25 @@ class Store(models.Model):
 
     def __str__(self):
         return str(self.name) + "_" + str(self.place)
-   
+
+class Worker(models.Model):
+    id = models.IntegerField(primary_key=True, default=100)
+    name = models.CharField(max_length=50, null=False)
+    age = models.IntegerField(null=False)
+    payment = models.CharField(max_length=50, null=False)
+    str_name = models.ForeignKey(Store, on_delete=models.CASCADE)
+    job = models.CharField(max_length=50, null=False)
+    air_id = models.ForeignKey(Airport, on_delete=models.CASCADE, default=100)
+
+    def __str__(self):
+        return self.name + "_" + str(self.id)
+
+class Supplier(models.Model):
+    id = models.IntegerField(primary_key=True, default=400)
+    type = models.CharField(max_length=50, null=False)
+
+    def __str__(self):
+        return str(self.id) + "_" + str(self.type)
+ 
 
 
