@@ -395,64 +395,93 @@ header #menu {
 /* course section ends */
 
 /* teacher section begins */
-.experts .box{
-    width:250px;
-    background:#fff;
-    border-radius: 5px;
-    box-shadow: var(--box-shadow);
-    margin:auto;
-    padding:15px;
+.team{
+    min-height: 100vh;
+    width:100vw;
     text-align: center;
+    background-color: #222;;
+  }
+  
+  .team .heading{
+    color:#fff;
+  }
+  
+  .team .heading::before, .team .heading::after{
+    border-color:#fff;
+  }
+  
+  .team .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .team .row .card{
+    height:35rem;
+    width:25rem;
+    background:#fff;
+    text-align: center;
+    margin:7rem 2rem;
     position: relative;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.experts .box img{
-    background:#f8f8fe;
-    border-radius: 5px;
-    width: 100%;
-    margin-bottom: 8px;
-}
-
-.experts .box h3{
-    font-size: 22px;
-    margin:2px 0;
-    color:black;
-}
-
-.experts .box span{
-    font-size: 15px;
-    color:#0a55a6;
-}
-
-.experts .box .share{
+    -webkit-box-reflect: below .2rem linear-gradient(transparent 70%, #0004);
+  }
+  
+  .team .row .card .image{
+    margin:1rem 0;
+    padding-top: 4rem;
+  }
+  
+  .team .row .card .image img{
+    height:13rem;
+    width:13rem;
+    border-radius: 50%;
+    border:.5rem solid #fff;
+    box-shadow: 0 0 .5rem rgba(0,0,0,.3);
+    object-fit: cover;
+  }
+  
+  .team .row .card .info h3{
+    font-size: 2rem;
+    color:#333;
+  }
+  
+  .team .row .card .info span{
+    font-size: 1.8rem;
+    color:var(--color);
+  }
+  
+  .team .row .card .info .icons a{
+    margin-top: 4rem;
+    padding:0 1rem;
+    font-size: 2rem;
+    color:#333;
+  }
+  
+  .team .row .card .info .icons a:hover{
+    color:var(--color);
+  }
+  
+  .team .row .card::before, .team .row .card::after{
+    content: '';
     position: absolute;
-    /* top:5px; right: -50px;
-    transition: .2s; */
-}
-
-.experts .box:hover .share{
-    right:15px;
-}
-
-.experts .box .share a{
-    border-radius: 5px;
-    background:#0a55a6;
-    color:#fff;
-    display: block;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    margin-top: 5px;
-}
-
-.experts .box .share a:hover{
-    background:black;
-}
-
+    border-radius: 50%;
+    height:15rem;
+    width:15rem;
+    z-index: -1;
+  }
+  
+  .team .row .card::before{
+    background:var(--color);
+    top:-3rem; right: -4rem;
+  }
+  
+  .team .row .card::after{
+    background:#ccc;
+    bottom:-3rem; left: -4rem;
+  }
+  
 /* contact section */
 .contact {
     background: #111;
