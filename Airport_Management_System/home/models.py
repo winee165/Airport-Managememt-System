@@ -65,6 +65,12 @@ class Supplier(models.Model):
 
     def __str__(self):
         return str(self.id) + "_" + str(self.type)
- 
 
+class BookingAgent(models.Model):
+    id = models.IntegerField(primary_key=True, default=400)
+    comp_name = models.CharField(max_length=50, null=False)
+    ag_name = models.CharField(max_length=50, null=False)
+
+    def __str__(self):
+        return str(self.ag_name) + "_" + str(self.id)
 

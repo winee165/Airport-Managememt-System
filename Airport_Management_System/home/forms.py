@@ -1,7 +1,7 @@
 # from attr import field, fields
 from django import forms
 # from matplotlib.pyplot import cla
-from .models import Airport, FlightCompany, Flight, Ticket, Store, Worker, Supplier
+from .models import Airport, FlightCompany, Flight, Ticket, Store, Worker, Supplier, BookingAgent
 
 class AirportForm(forms.ModelForm):
     class Meta:
@@ -36,4 +36,9 @@ class WorkerForm(forms.ModelForm):
 class SupplierForm(forms.ModelForm):
     class Meta:
         model = Supplier
+        fields = '__all__'
+
+class BookingAgentForm(forms.ModelForm):
+    class Meta:
+        model = BookingAgent
         fields = '__all__'
