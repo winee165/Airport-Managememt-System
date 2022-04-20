@@ -82,7 +82,7 @@ def bookingagent(request):
             form.save()
         else:
             form = BookingAgentForm()
-    return render(request, 'book_agent.html')
+    return render(request, 'booking-agent.html')
 
 def index(request):
 	if request.method == "POST":
