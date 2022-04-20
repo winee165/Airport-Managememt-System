@@ -1,7 +1,6 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  {% load static %}
-  {% load staticfiles %}
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,7 +18,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="{% static 'css/airport.css'  %}" />
+    <link rel="stylesheet" href="{%  static  'css/flightc.css'  %}" />
   </head>
   <body>
     <header>
@@ -37,22 +36,23 @@
       </nav>
     </header>
     <!-- header section end -->
-    <img class="wave" src="img/wave.png " />
+    <img class="wave" src="img/wave.png" />
     <div class="container">
       <div class="img">
-        <img src="{% static 'Images/undraw_Airport_re_oqk1.png' %}" />
+        <img src="{% static 'Images/undraw_booking_re_gw4j.svg' %}" />
       </div>
       <div class="login-content">
-        <form action="index.html">
+        <form action="" method="post">
+          {% csrf_token %}
           <img src="{% static 'Images/undraw_aircraft_fbvl.png' %}" />
-          <h2 class="title">Airport Information</h2>
+          <h2 class="title">Flight Company Information</h2>
           <div class="input-div one">
             <div class="i">
               <i class="fas fa-user"></i>
             </div>
             <div class="div">
-              <h5>Airport Id</h5>
-              <input type="number" class="input" name="air_id" />
+              <h5>Company ID</h5>
+              <input type="number" class="input" name="fli_id" />
             </div>
           </div>
           <div class="input-div pass">
@@ -60,27 +60,17 @@
               <i class="fas fa-lock"></i>
             </div>
             <div class="div">
-              <h5>Airport Name</h5>
-              <input type="name" class="input" name="airport_name"/>
+              <h5>Flight Company Name</h5>
+              <input type="text" class="input" name="company_name"/>
             </div>
           </div>
-          <div class="input-div pass">
-            <div class="i">
-              <i class="fas fa-lock"></i>
-            </div>
-            <div class="div">
-              <h5>City</h5>
-              <input type="text" class="input" name="city"/>
-            </div>
-          </div>
-          
-            
-            <input type="submit" class="btn" value="Submit" />
+        
+            <input type="submit" class="btn" value="post" />
         
         </div>
         </form>
       </div>
     </div>
-    <script type="text/javascript" src="{% static 'airport.js' %}"></script>
+    <script type="text/javascript" src="{% static 'flightc.js' %}"></script>
   </body>
 </html>

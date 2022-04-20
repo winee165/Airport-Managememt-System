@@ -41,10 +41,11 @@
 
   <!-- login form section -->
   <div class="login-form">
-    <form action="">
+    <form id="login-form" method="post">
+      {% csrf_token %}
       <h3>Login</h3>
-      <input type="email" placeholder="username" class="box" />
-      <input type="password" placeholder="password" class="box" />
+      <input type="text" placeholder="username" class="box" id="id_username" name="username"/>
+      <input type="password" placeholder="password" class="box" id="id_password" name="password"/>
       <p>Forget password? <a href="#">Click Here</a></p>
       <p>Don't have an account ? <a href="#">Register Now</a></p>
       <input type="submit" class="btn" value="login" />
