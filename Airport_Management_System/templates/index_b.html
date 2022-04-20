@@ -1,0 +1,816 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIRWEB</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="{%  static  'css/style.css'  %}" />
+</head>
+
+<body>
+  <header>
+    <!-- header section begins -->
+    <div id="menu" class="fas fa-bars"></div>
+    <!-- navbar begins -->
+
+    <a href="#" class="logo"> <i class="fa-solid fa-plane-departure"></i> AIRWEB</a>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#course">Book</a></li>
+        <li><a href="#teacher">Developers</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- login section -->
+    <div id="login" class="fas fa-user-circle"></div>
+    <!-- login section ends -->
+  </header>
+  <!-- header section end -->
+
+  <!-- login form section -->
+  <div class="login-form">
+    <form id="login-form" method="post">
+      {% csrf_token %}
+      <h3>Login</h3>
+      <input type="text" placeholder="username" class="box" id="id_username" name="username"/>
+      <input type="password" placeholder="password" class="box" id="id_password" name="password"/>
+      <p>Forget password? <a href="#">Click Here</a></p>
+      <p>Don't have an account ? <a href="#">Register Now</a></p>
+      <input type="submit" class="btn" value="login" />
+      <i class="fas fa-times"></i>
+    </form>
+  </div>
+  <!-- login section ends -->
+  <!-- home section starts -->
+  <section class="home" id="home">
+    <br><br><br><br><br> <br> <br>
+    <h1 style="color: black;">AIRWEB - TRAVEL IS EASY</h1>
+
+    <p style="background-color: black; border-radius: 5px;"> Make AIRWEB Your Travel Companion To Not Only Fly On-Time
+      But To Also Enjoy Hassle-Free And Courteous Service On Board And Beyond.</p>
+    <a href="#course"> <button class="btn">Learn More</button> </a>
+
+    <div class="shape"></div>
+  </section>
+  <!-- home section end -->
+
+  <!-- about section start -->
+  <section class="about" id="about">
+    <div class="image">
+      <!-- animation began -->
+      <svg class="animated" id="freepik_stories-departing" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" version="1.1"
+        xmlns:svgjs="http://svgjs.com/svgjs">
+        <style>
+          svg#freepik_stories-departing:not(.animated) .animable {
+            opacity: 0;
+          }
+
+          svg#freepik_stories-departing.animated #freepik--Clouds--inject-33 {
+            animation: 1.5s Infinite linear wind;
+            animation-delay: 0s;
+          }
+
+          svg#freepik_stories-departing.animated #freepik--Airplane--inject-33 {
+            animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) slideLeft;
+            animation-delay: 0s;
+          }
+
+          @keyframes wind {
+            0% {
+              transform: rotate(0deg);
+            }
+
+            25% {
+              transform: rotate(1deg);
+            }
+
+            75% {
+              transform: rotate(-1deg);
+            }
+          }
+
+          @keyframes slideLeft {
+            0% {
+              opacity: 0;
+              transform: translateX(-30px);
+            }
+
+            100% {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+        </style>
+        <g id="freepik--background-simple--inject-33" class="animable" style="transform-origin: 250.461px 232.099px;">
+          <path
+            d="M430,175.65s-32.65-63-100.64-84.18S230,94.15,195.2,120c-27.37,20.34-48.78,48.73-71.19,74.06-20.52,23.19-50.62,42-60.08,73-12,39.21,15.35,79.2,47.71,99.64,45.16,28.53,88.86,6.86,136-3.25l.26-.06a137.08,137.08,0,0,1,20.66-2.95c54.72-3.11,94.05,35.31,133.83-9S448.37,225.11,430,175.65Z"
+            style="fill: rgb(50, 153, 168); transform-origin: 250.461px 232.099px;" id="elrpj907dissr" class="animable">
+          </path>
+          <g id="eliy46kbpyahk">
+            <path
+              d="M430,175.65s-32.65-63-100.64-84.18S230,94.15,195.2,120c-27.37,20.34-48.78,48.73-71.19,74.06-20.52,23.19-50.62,42-60.08,73-12,39.21,15.35,79.2,47.71,99.64,45.16,28.53,88.86,6.86,136-3.25l.26-.06a137.08,137.08,0,0,1,20.66-2.95c54.72-3.11,94.05,35.31,133.83-9S448.37,225.11,430,175.65Z"
+              style="fill: rgb(255, 255, 255); opacity: 0.7; transform-origin: 250.461px 232.099px;" class="animable">
+            </path>
+          </g>
+        </g>
+        <g id="freepik--Clouds--inject-33" class="animable" style="transform-origin: 255.836px 243.16px;">
+          <path
+            d="M235.67,182.42c-4.17-2.27-6.07-.38-7.58-2.27s4.17-6.83-7.21-11.76c0,0-.76-10.61-16.3-11S193.21,168,189,170.67s-5.31-1.52-9.48,1.13-2.28,8-5.69,8.72-8-3.41-12.13-.75-4.17,4.92-6.07,4.92-5.69-1.51-8,0-4.93,3.42-4.93,3.42H238.7S239.84,184.69,235.67,182.42Z"
+            style="fill: rgb(50, 153, 168); transform-origin: 190.771px 172.745px;" id="eltrit6qzgrtd" class="animable">
+          </path>
+          <path
+            d="M429.92,259.54c-6.18-3.37-9-.56-11.24-3.37s6.18-10.11-10.67-17.41c0,0-1.12-15.73-24.16-16.29s-16.85,15.72-23,19.66-7.86-2.25-14,1.68-3.37,11.8-8.43,12.92-11.79-5.05-18-1.12-6.18,7.3-9,7.3-8.43-2.25-11.8,0-7.3,5.06-7.3,5.06H434.41S436.1,262.91,429.92,259.54Z"
+            style="fill: rgb(50, 153, 168); transform-origin: 363.471px 245.213px;" id="el7v9oxu69nqa" class="animable">
+          </path>
+          <path
+            d="M214.68,320.51c-6.18-3.37-9-.56-11.24-3.37s6.18-10.11-10.67-17.42c0,0-1.12-15.72-24.15-16.29s-16.86,15.73-23,19.67-7.87-2.25-14.05,1.68-3.37,11.8-8.42,12.92-11.8-5.05-18-1.12-6.18,7.3-9,7.3-8.42-2.25-11.79,0-7.31,5.06-7.31,5.06H219.17S220.86,323.88,214.68,320.51Z"
+            style="fill: rgb(50, 153, 168); transform-origin: 148.216px 306.178px;" id="el560p26bq7b9" class="animable">
+          </path>
+          <g id="el4wcblpvcqhl">
+            <g style="opacity: 0.4; transform-origin: 255.836px 243.16px;" class="animable">
+              <path
+                d="M235.67,182.42c-4.17-2.27-6.07-.38-7.58-2.27s4.17-6.83-7.21-11.76c0,0-.76-10.61-16.3-11S193.21,168,189,170.67s-5.31-1.52-9.48,1.13-2.28,8-5.69,8.72-8-3.41-12.13-.75-4.17,4.92-6.07,4.92-5.69-1.51-8,0-4.93,3.42-4.93,3.42H238.7S239.84,184.69,235.67,182.42Z"
+                style="fill: rgb(255, 255, 255); transform-origin: 190.771px 172.745px;" id="elv5o0jlntaco"
+                class="animable"></path>
+              <path
+                d="M429.92,259.54c-6.18-3.37-9-.56-11.24-3.37s6.18-10.11-10.67-17.41c0,0-1.12-15.73-24.16-16.29s-16.85,15.72-23,19.66-7.86-2.25-14,1.68-3.37,11.8-8.43,12.92-11.79-5.05-18-1.12-6.18,7.3-9,7.3-8.43-2.25-11.8,0-7.3,5.06-7.3,5.06H434.41S436.1,262.91,429.92,259.54Z"
+                style="fill: rgb(255, 255, 255); transform-origin: 363.471px 245.213px;" id="ell7ujtl0jmdj"
+                class="animable"></path>
+              <path
+                d="M214.68,320.51c-6.18-3.37-9-.56-11.24-3.37s6.18-10.11-10.67-17.42c0,0-1.12-15.72-24.15-16.29s-16.86,15.73-23,19.67-7.87-2.25-14.05,1.68-3.37,11.8-8.42,12.92-11.8-5.05-18-1.12-6.18,7.3-9,7.3-8.42-2.25-11.79,0-7.31,5.06-7.31,5.06H219.17S220.86,323.88,214.68,320.51Z"
+                style="fill: rgb(255, 255, 255); transform-origin: 148.216px 306.178px;" id="el9ge3d6ucfzn"
+                class="animable"></path>
+            </g>
+          </g>
+        </g>
+        <g id="freepik--Airplane--inject-33" class="animable animator-active"
+          style="transform-origin: 355.55px 306.362px;">
+          <path d="M383.83,318.51s-15.71-2.7-23.79-12.12-51.17-60.15-51.17-60.15-8.08-3.14-24.69,0l19.75,79Z"
+            style="fill: rgb(50, 153, 168); transform-origin: 334.005px 285.042px;" id="elddewls2xlt" class="animable">
+          </path>
+          <path
+            d="M415.7,317.16s-103.24.9-139.6,10.77v7.63s48.06,15.22,113.54,29.77a106.46,106.46,0,0,0,23.13,2.55H435V316.71Z"
+            style="fill: rgb(50, 153, 168); transform-origin: 355.55px 342.295px;" id="elyvjxuupoof8" class="animable">
+          </path>
+          <g id="elo37gmpyfoe">
+            <g style="opacity: 0.3; transform-origin: 355.55px 306.715px;" class="animable">
+              <path
+                d="M303.41,323.16c24.2-2.91,54.78-4.42,77.92-5.2-4.76-1.19-15.2-4.46-21.29-11.57-1.56-1.82-4.43-5.18-8-9.42-17,11.74-36.88,18.31-49.73,21.64Z"
+                id="elmrt14gjuxk" class="animable" style="transform-origin: 341.82px 310.065px;"></path>
+              <path
+                d="M300.67,312.2c22-7.3,29.51-24.28,31.8-38.19l-23.6-27.77a16.66,16.66,0,0,0-2.41-.64c.8,15.72-4.9,31.3-11.49,43.78Z"
+                id="elkbn4s6zarh" class="animable" style="transform-origin: 313.72px 278.9px;"></path>
+              <path
+                d="M383.83,350.82c-17.83-2.09-77-12.63-102.34-17.19v-7c-1.92.42-3.73.85-5.39,1.3v7.63l.09,0h0l.25.08h0l2.7.83h0l2.29.7h0c14.27,4.32,55.59,16.43,108.15,28.11a106.46,106.46,0,0,0,23.13,2.55H435V351.4C421.94,352,399.3,352.64,383.83,350.82Z"
+                id="el0wbnhowkr7ud" class="animable" style="transform-origin: 355.55px 347.23px;"></path>
+              <polygon points="302.59 336.01 342.98 334.22 314.7 327.03 299 327.03 302.59 336.01" id="elwa8l60tf4y"
+                class="animable" style="transform-origin: 320.99px 331.52px;"></polygon>
+            </g>
+          </g>
+        </g>
+        <g id="freepik--Window--inject-33" class="animable" style="transform-origin: 254px 235.435px;">
+          <rect x="73" y="360.1" width="362" height="25"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 254px 372.6px;"
+            id="elh5xacwe47pd" class="animable"></rect>
+          <rect x="73" y="268.1" width="362" height="6"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 254px 271.1px;"
+            id="el25a6h9jt67g" class="animable"></rect>
+          <line x1="118" y1="100.1" x2="118" y2="374.1"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 118px 237.1px;"
+            id="elfs3vmg0c64n" class="animable"></line>
+          <line x1="255" y1="100.1" x2="255" y2="374.1"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 255px 237.1px;"
+            id="elmc4t78v38xo" class="animable"></line>
+          <line x1="392" y1="100.1" x2="392" y2="374.1"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 392px 237.1px;"
+            id="elynitk40zv7" class="animable"></line>
+          <path d="M76.51,171.1C196,171,316,171,435,171.1"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 255.755px 171.062px;"
+            id="elu1yu39bbsqq" class="animable"></path>
+          <line x1="158.47" y1="212.87" x2="161.61" y2="217.34"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 160.04px 215.105px;"
+            id="ell5kukaq1cz9" class="animable"></line>
+          <line x1="129.34" y1="171.4" x2="154.37" y2="207.04"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 141.855px 189.22px;"
+            id="elktloom0p19c" class="animable"></line>
+          <line x1="296.85" y1="317.34" x2="299.99" y2="321.81"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 298.42px 319.575px;"
+            id="elwa9dw2bnzpk" class="animable"></line>
+          <line x1="267.72" y1="275.87" x2="292.75" y2="311.51"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 280.235px 293.69px;"
+            id="el7wf67czlq7" class="animable"></line>
+          <line x1="308.33" y1="355.62" x2="311.48" y2="360.1"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 309.905px 357.86px;"
+            id="elfuqe6wwvv0f" class="animable"></line>
+          <line x1="279.2" y1="314.15" x2="304.24" y2="349.79"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 291.72px 331.97px;"
+            id="el2wkyxyi6z2u" class="animable"></line>
+          <line x1="194.57" y1="148.33" x2="197.71" y2="152.8"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 196.14px 150.565px;"
+            id="eljs78fcb7xnk" class="animable"></line>
+          <line x1="165.44" y1="106.86" x2="190.47" y2="142.5"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 177.955px 124.68px;"
+            id="eljqr3ccq86xh" class="animable"></line>
+          <line x1="313.17" y1="127.24" x2="316.31" y2="131.72"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 314.74px 129.48px;"
+            id="eluns702sg3la" class="animable"></line>
+          <line x1="284.04" y1="85.77" x2="309.07" y2="121.41"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 296.555px 103.59px;"
+            id="el0zlfw7ii7e6h" class="animable"></line>
+          <line x1="425.93" y1="313.51" x2="429.07" y2="317.98"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 427.5px 315.745px;"
+            id="el6zgfqv024rw" class="animable"></line>
+          <line x1="396.8" y1="272.04" x2="421.83" y2="307.68"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 409.315px 289.86px;"
+            id="el896j7hoo8f7" class="animable"></line>
+          <line x1="152.45" y1="316.24" x2="155.59" y2="320.72"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 154.02px 318.48px;"
+            id="elxmne7wl2rm" class="animable"></line>
+          <line x1="123.32" y1="274.77" x2="148.36" y2="310.41"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 135.84px 292.59px;"
+            id="elshwkm9mx8yb" class="animable"></line>
+          <line x1="174.88" y1="133.01" x2="178.02" y2="137.49"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 176.45px 135.25px;"
+            id="el8kfnhjfd4su" class="animable"></line>
+          <line x1="145.75" y1="91.54" x2="170.78" y2="127.18"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 158.265px 109.36px;"
+            id="el0tt0f1dd6at" class="animable"></line>
+          <line x1="337.62" y1="246.34" x2="340.76" y2="250.82"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 339.19px 248.58px;"
+            id="ele9ltfaiomod" class="animable"></line>
+          <line x1="308.49" y1="204.87" x2="333.53" y2="240.51"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-miterlimit: 10; transform-origin: 321.01px 222.69px;"
+            id="elu6dj4mr4sg8" class="animable"></line>
+        </g>
+        <g id="freepik--Plants--inject-33" class="animable" style="transform-origin: 98.3021px 334.678px;">
+          <path
+            d="M75.73,296.76c1.43.63,5,.55,5,.55s-.75-2.3-.82-2.44c-.77-1.62-3.21-4.28-5.19-4a2.37,2.37,0,0,0-1.91,3A5,5,0,0,0,75.73,296.76Z"
+            style="fill: rgb(38, 50, 56); transform-origin: 76.7233px 294.081px;" id="els7tbjhbhgrq" class="animable">
+          </path>
+          <path
+            d="M121.76,284.8c-2-.22-4.36,2.51-5.08,4.14-.07.14-.8,2.46-.76,2.46h0c-.37.43-.77.89-1.2,1.41-.78,1-1.65,2-2.52,3.29a42.75,42.75,0,0,0-2.61,4.16,31.1,31.1,0,0,0-2.23,5,.14.14,0,0,1,0,.06c0-.58,0-2.22,0-2.35-.23-1.77-1.71-5.06-3.68-5.43a2.37,2.37,0,0,0-2.73,2.23,4.92,4.92,0,0,0,1.9,3.71c1.12,1,4.24,2,4.49,2.05A41.14,41.14,0,0,0,106,311c-.19,1.07-.35,2.15-.5,3.24,0-.5,0-1,0-1-.23-1.77-1.72-5.06-3.69-5.43A2.37,2.37,0,0,0,99.07,310a5,5,0,0,0,1.9,3.71,15.89,15.89,0,0,0,4.36,2c-.06.42-.11.83-.16,1.25-.24,2-.47,4-.76,6-.1.69-.23,1.36-.35,2,0-.45,0-.83,0-.89-.23-1.77-1.72-5.06-3.69-5.42a2.37,2.37,0,0,0-2.73,2.23,5,5,0,0,0,1.9,3.7,15,15,0,0,0,4.23,2c-.15.69-.29,1.38-.46,2-.13.45-.22.9-.38,1.34l-.42,1.32c-.3.82-.61,1.68-.92,2.48l-.64,1.61c.1-.68.29-2,.29-2.15a9.14,9.14,0,0,0-1.23-4.47,3.15,3.15,0,0,0,0-.53,2.37,2.37,0,0,0-2.89-2c-1.94.52-3.16,3.91-3.26,5.7,0,.11.07,1.25.12,2-.09-.42-.18-.83-.29-1.26-.2-.86-.43-1.71-.67-2.62-.13-.44-.27-.88-.4-1.32s-.31-.9-.47-1.36c-.38-1-.82-2.08-1.29-3.12a15.61,15.61,0,0,0,4.47-1.68A4.94,4.94,0,0,0,97.44,319a2.37,2.37,0,0,0-2.56-2.43c-2,.22-3.72,3.39-4.08,5.14,0,.11-.14,1.39-.19,2.1-.28-.62-.56-1.24-.87-1.86-.89-1.8-1.85-3.58-2.79-5.37-.29-.54-.58-1.09-.86-1.64a16.5,16.5,0,0,0,4.62-1.71,5,5,0,0,0,2.18-3.56,2.37,2.37,0,0,0-2.56-2.42c-2,.21-3.72,3.39-4.08,5.14,0,.13-.19,2-.21,2.45-.63-1.21-1.24-2.41-1.8-3.63a41.29,41.29,0,0,1-1.95-5.05,16.63,16.63,0,0,0,4.65-1.71,5,5,0,0,0,2.17-3.56,2.36,2.36,0,0,0-2.56-2.42c-2,.21-3.71,3.38-4.07,5.13,0,.14-.21,2.13-.22,2.49,0-.1-.07-.2-.1-.3a29.87,29.87,0,0,1-1-5.33c-.12-1-.17-1.95-.2-2.88a15.75,15.75,0,0,0,4.7-1.18,4.91,4.91,0,0,0,2.55-3.29,2.37,2.37,0,0,0-2.27-2.7c-2,0-4.07,3-4.62,4.66,0,.09-.23,1.07-.37,1.78,0-.42,0-.86,0-1.26,0-1.51.1-2.9.2-4.13.06-.69.12-1.32.19-1.91a15.78,15.78,0,0,0,3.61-3.2,4.93,4.93,0,0,0,.74-4.1,2.37,2.37,0,0,0-3.26-1.34c-1.77.92-2.24,4.5-2,6.26,0,.15.7,2.49.73,2.47l0,0c-.07.56-.15,1.17-.22,1.83-.12,1.23-.25,2.62-.29,4.14a41.32,41.32,0,0,0,.12,4.91,31.69,31.69,0,0,0,.91,5.41.64.64,0,0,1,0,.07c-.31-.5-1.24-1.85-1.32-2-1.17-1.35-4.23-3.28-6.07-2.49a2.36,2.36,0,0,0-1,3.36,5,5,0,0,0,3.63,2.05c1.49.21,4.63-.7,4.88-.77a40,40,0,0,0,1.9,5.26c.43,1,.89,2,1.37,3-.28-.42-.54-.79-.58-.84-1.17-1.35-4.23-3.27-6.07-2.49a2.37,2.37,0,0,0-1,3.37,5,5,0,0,0,3.63,2,15.9,15.9,0,0,0,4.74-.73l.56,1.14c.91,1.8,1.82,3.6,2.67,5.4.29.63.56,1.26.83,1.9-.25-.38-.47-.69-.51-.73-1.16-1.35-4.22-3.28-6.06-2.5a2.37,2.37,0,0,0-1,3.37,4.93,4.93,0,0,0,3.63,2,14.81,14.81,0,0,0,4.61-.69c.26.66.52,1.31.74,2,.14.45.31.87.43,1.32s.24.89.37,1.33c.2.86.42,1.74.6,2.58.13.58.24,1.14.36,1.7-.29-.63-.88-1.86-1-1.95-.95-1.52-3.67-3.88-5.61-3.39a2.37,2.37,0,0,0-1.55,3.17A4.92,4.92,0,0,0,88.11,335,16.37,16.37,0,0,0,93,335c.18.93.35,1.83.5,2.69.53,3,.85,5.47,1,7.22,0,.31.07.58.1.85h-6l2.2,42.92h10.27l2.2-42.92H97.7l.12-.26c.77-1.61,1.84-3.91,3-6.73.37-.9.74-1.85,1.12-2.84a16.36,16.36,0,0,0,4.89.38,5,5,0,0,0,3.46-2.32,2.38,2.38,0,0,0-1.3-3.28c-1.9-.63-4.8,1.52-5.86,3-.06.09-.64,1.08-1,1.72.15-.41.3-.8.45-1.22.3-.82.58-1.66.88-2.55.13-.44.27-.88.4-1.33s.24-.92.36-1.38c.25-1.09.46-2.2.65-3.32a15.79,15.79,0,0,0,4.64,1.07,5,5,0,0,0,3.78-1.77,2.37,2.37,0,0,0-.8-3.43c-1.78-.92-5,.77-6.24,2-.07.08-.88,1.09-1.31,1.65.1-.68.21-1.35.3-2,.24-2,.43-4,.63-6,.06-.62.12-1.23.19-1.85a16.41,16.41,0,0,0,4.8,1.13,4.92,4.92,0,0,0,3.77-1.77,2.36,2.36,0,0,0-.79-3.43c-1.78-.92-5,.77-6.24,2-.09.1-1.25,1.55-1.53,1.93.14-1.35.3-2.7.5-4a41.85,41.85,0,0,1,1.16-5.28c.12,0,3.29,1.24,4.83,1.13a4.92,4.92,0,0,0,3.77-1.77,2.36,2.36,0,0,0-.8-3.43c-1.77-.92-5,.77-6.23,2-.1.1-1.35,1.66-1.55,2,0-.1,0-.2.08-.3a30.23,30.23,0,0,1,2.09-5c.46-.89.94-1.71,1.43-2.51a15.6,15.6,0,0,0,4.57,1.61,5,5,0,0,0,4-1.34,2.36,2.36,0,0,0-.42-3.5c-1.66-1.11-5,.22-6.42,1.34-.07.06-.78.76-1.28,1.28.22-.36.45-.73.67-1.06.84-1.27,1.69-2.37,2.44-3.34.44-.55.84-1,1.22-1.49a15.86,15.86,0,0,0,4.78-.68,5,5,0,0,0,2.88-3A2.36,2.36,0,0,0,121.76,284.8Zm-22,53.47c-1.2,2.77-2.31,5-3.11,6.6l-.43.86H96c0-.31-.08-.65-.13-1-.24-1.76-.63-4.28-1.22-7.27-.19-.94-.4-1.95-.64-3a23.75,23.75,0,0,0,2.74-1.29,17.69,17.69,0,0,0,4,2.58C100.42,336.63,100.07,337.48,99.72,338.27Z"
+            style="fill: rgb(38, 50, 56); transform-origin: 98.4161px 334.678px;" id="elfrrrevjamm5" class="animable">
+          </path>
+          <path
+            d="M111.27,297.53s.64-2.33.66-2.49c.25-1.77-.32-5.33-2.12-6.21a2.37,2.37,0,0,0-3.22,1.43,5,5,0,0,0,.85,4.08C108.29,295.66,111.27,297.53,111.27,297.53Z"
+            style="fill: rgb(38, 50, 56); transform-origin: 109.225px 293.077px;" id="elxcb5sl6efmr" class="animable">
+          </path>
+        </g>
+        <g id="freepik--Board--inject-33" class="animable" style="transform-origin: 329.245px 179.94px;">
+          <rect x="234.99" y="123.44" width="189" height="113" rx="6"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 329.49px 179.94px;"
+            id="elbvnpoeu3qc" class="animable"></rect>
+          <line x1="233.8" y1="153.45" x2="424.69" y2="153.45"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 329.245px 153.45px;"
+            id="elzzww4n5vs9s" class="animable"></line>
+          <line x1="283.74" y1="141.18" x2="374.75" y2="141.18"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px; transform-origin: 329.245px 141.18px;"
+            id="elxuku3ost00l" class="animable"></line>
+          <line x1="281.17" y1="153.92" x2="281.17" y2="235.39"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 281.17px 194.655px;"
+            id="elx7phs0olbnn" class="animable"></line>
+          <line x1="330.9" y1="153.92" x2="330.9" y2="235.39"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 330.9px 194.655px;"
+            id="elj05u6iebzvl" class="animable"></line>
+          <line x1="380.64" y1="153.92" x2="380.64" y2="235.39"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 380.64px 194.655px;"
+            id="elz593rr4i29q" class="animable"></line>
+          <line x1="240.9" y1="164.34" x2="252.75" y2="164.34"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 246.825px 164.34px;"
+            id="el1gsenk57zec" class="animable"></line>
+          <line x1="240.9" y1="170.03" x2="256.92" y2="170.03"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 248.91px 170.03px;"
+            id="el75xhz49yugo" class="animable"></line>
+          <line x1="240.9" y1="175.71" x2="252.75" y2="175.71"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 246.825px 175.71px;"
+            id="elnij2irkbsi" class="animable"></line>
+          <line x1="240.9" y1="181.39" x2="262.05" y2="181.39"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 251.475px 181.39px;"
+            id="el3hzev40rf37" class="animable"></line>
+          <line x1="240.9" y1="187.08" x2="252.75" y2="187.08"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 246.825px 187.08px;"
+            id="elfhn8w2a46g" class="animable"></line>
+          <line x1="240.9" y1="192.76" x2="256.63" y2="192.76"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 248.765px 192.76px;"
+            id="eljpsjiqfl43" class="animable"></line>
+          <line x1="240.9" y1="198.45" x2="252.75" y2="198.45"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 246.825px 198.45px;"
+            id="elb2sjnty9n3q" class="animable"></line>
+          <line x1="240.9" y1="204.13" x2="265.76" y2="204.13"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 253.33px 204.13px;"
+            id="el25irvjcqkfa" class="animable"></line>
+          <line x1="240.9" y1="209.81" x2="252.75" y2="209.81"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 246.825px 209.81px;"
+            id="eln40lrfoygc" class="animable"></line>
+          <line x1="240.9" y1="215.5" x2="257.49" y2="215.5"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 249.195px 215.5px;"
+            id="elb53uorderb4" class="animable"></line>
+          <line x1="240.9" y1="221.18" x2="252.75" y2="221.18"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 246.825px 221.18px;"
+            id="eluvzngruvrq" class="animable"></line>
+          <line x1="240.9" y1="226.87" x2="252.75" y2="226.87"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 246.825px 226.87px;"
+            id="elwhc7cfmydwr" class="animable"></line>
+          <line x1="291.69" y1="164.34" x2="303.53" y2="164.34"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 297.61px 164.34px;"
+            id="eld9y4worxos" class="animable"></line>
+          <line x1="291.69" y1="170.03" x2="307.7" y2="170.03"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 299.695px 170.03px;"
+            id="elirjgi6lxc0m" class="animable"></line>
+          <line x1="291.69" y1="175.71" x2="303.53" y2="175.71"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 297.61px 175.71px;"
+            id="elic5ruf8793" class="animable"></line>
+          <line x1="291.69" y1="181.39" x2="312.84" y2="181.39"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 302.265px 181.39px;"
+            id="elzzr68hxa75d" class="animable"></line>
+          <line x1="291.69" y1="187.08" x2="303.53" y2="187.08"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 297.61px 187.08px;"
+            id="elfbn5ysmt7jf" class="animable"></line>
+          <line x1="291.69" y1="192.76" x2="307.42" y2="192.76"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 299.555px 192.76px;"
+            id="el8ff28wg7csb" class="animable"></line>
+          <line x1="291.69" y1="198.45" x2="303.53" y2="198.45"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 297.61px 198.45px;"
+            id="elwdht6ayt0xa" class="animable"></line>
+          <line x1="291.69" y1="204.13" x2="316.55" y2="204.13"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 304.12px 204.13px;"
+            id="el4lc5h5qj8nd" class="animable"></line>
+          <line x1="291.69" y1="209.81" x2="303.53" y2="209.81"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 297.61px 209.81px;"
+            id="el4ick38mbz78" class="animable"></line>
+          <line x1="291.69" y1="215.5" x2="308.27" y2="215.5"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 299.98px 215.5px;"
+            id="elw14bxcnxjb" class="animable"></line>
+          <line x1="291.69" y1="221.18" x2="303.53" y2="221.18"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 297.61px 221.18px;"
+            id="el3vbo0ts9f6f" class="animable"></line>
+          <line x1="291.69" y1="226.87" x2="303.53" y2="226.87"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 297.61px 226.87px;"
+            id="el59ltbphg4r" class="animable"></line>
+          <line x1="342.47" y1="164.34" x2="354.31" y2="164.34"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 348.39px 164.34px;"
+            id="elr4n6dwxm7bj" class="animable"></line>
+          <line x1="342.47" y1="170.03" x2="358.49" y2="170.03"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 350.48px 170.03px;"
+            id="eles0t6k62ff4" class="animable"></line>
+          <line x1="342.47" y1="175.71" x2="354.31" y2="175.71"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 348.39px 175.71px;"
+            id="el8citspm8xxk" class="animable"></line>
+          <line x1="342.47" y1="181.39" x2="363.62" y2="181.39"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 353.045px 181.39px;"
+            id="eldvg7wdeh5yu" class="animable"></line>
+          <line x1="342.47" y1="187.08" x2="354.31" y2="187.08"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 348.39px 187.08px;"
+            id="elsw7x8gy1rxq" class="animable"></line>
+          <line x1="342.47" y1="192.76" x2="358.2" y2="192.76"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 350.335px 192.76px;"
+            id="elils3vdmznym" class="animable"></line>
+          <line x1="342.47" y1="198.45" x2="354.31" y2="198.45"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 348.39px 198.45px;"
+            id="elmtitfdejqyh" class="animable"></line>
+          <line x1="342.47" y1="204.13" x2="367.33" y2="204.13"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 354.9px 204.13px;"
+            id="elbk2e9m3bwov" class="animable"></line>
+          <line x1="342.47" y1="209.81" x2="354.31" y2="209.81"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 348.39px 209.81px;"
+            id="elagmp2rimfbd" class="animable"></line>
+          <line x1="342.47" y1="215.5" x2="359.06" y2="215.5"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 350.765px 215.5px;"
+            id="el8bywi1qox7h" class="animable"></line>
+          <line x1="342.47" y1="221.18" x2="354.31" y2="221.18"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 348.39px 221.18px;"
+            id="elvsbf722hxd" class="animable"></line>
+          <line x1="342.47" y1="226.87" x2="354.31" y2="226.87"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 348.39px 226.87px;"
+            id="eljzsht35czo" class="animable"></line>
+          <line x1="393.25" y1="164.34" x2="405.1" y2="164.34"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 399.175px 164.34px;"
+            id="els9mg7v04nz" class="animable"></line>
+          <line x1="393.25" y1="170.03" x2="409.27" y2="170.03"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 401.26px 170.03px;"
+            id="elswqt703y1w" class="animable"></line>
+          <line x1="393.25" y1="175.71" x2="405.1" y2="175.71"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 399.175px 175.71px;"
+            id="elakb5kl452jf" class="animable"></line>
+          <line x1="393.25" y1="181.39" x2="414.4" y2="181.39"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 403.825px 181.39px;"
+            id="el7djiafrjxsc" class="animable"></line>
+          <line x1="393.25" y1="187.08" x2="405.1" y2="187.08"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 399.175px 187.08px;"
+            id="elqi23xdbfgd" class="animable"></line>
+          <line x1="393.25" y1="192.76" x2="408.98" y2="192.76"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 401.115px 192.76px;"
+            id="elvtd63hcq8xg" class="animable"></line>
+          <line x1="393.25" y1="198.45" x2="405.1" y2="198.45"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 399.175px 198.45px;"
+            id="eli9ib9uxy7u" class="animable"></line>
+          <line x1="393.25" y1="204.13" x2="418.11" y2="204.13"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 405.68px 204.13px;"
+            id="el2huwfrhragn" class="animable"></line>
+          <line x1="393.25" y1="209.81" x2="405.1" y2="209.81"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 399.175px 209.81px;"
+            id="eludbo75yxxpg" class="animable"></line>
+          <line x1="393.25" y1="215.5" x2="409.84" y2="215.5"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 401.545px 215.5px;"
+            id="el5tlp638e3v" class="animable"></line>
+          <line x1="393.25" y1="221.18" x2="405.1" y2="221.18"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 399.175px 221.18px;"
+            id="eljambu84wdgo" class="animable"></line>
+          <line x1="393.25" y1="226.87" x2="405.1" y2="226.87"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 399.175px 226.87px;"
+            id="elkxdegssubco" class="animable"></line>
+          <path
+            d="M251.21,145.3c0-.34,0-.66,0-1,0-.05.06-.11.11-.15l1.18-.89a.27.27,0,0,0,.1-.18c0-1.22,0-2.43,0-3.64a.83.83,0,0,0,0-.13L247,141.08c0-.07,0-.11,0-.16,0-.37,0-.75,0-1.12a.21.21,0,0,1,.12-.21q2.68-1.68,5.38-3.35a.28.28,0,0,0,.14-.27c0-1.22,0-2.43,0-3.65a1.05,1.05,0,0,1,1.53-1,1,1,0,0,1,.58,1v3.63a.32.32,0,0,0,.17.31l5.32,3.32a.29.29,0,0,1,.16.27c0,.41,0,.81,0,1.24l-5.63-1.76c0,.06,0,.11,0,.15V143a.29.29,0,0,0,.13.27c.4.29.79.59,1.18.89a.3.3,0,0,1,.1.2c0,.3,0,.6,0,.93l-1-.29-1.3-.37a.86.86,0,0,0-.32,0l-2.2.63Z"
+            style="fill: rgb(255, 255, 255); transform-origin: 253.7px 138.251px;" id="ellsy9ahqbl9i" class="animable">
+          </path>
+          <circle cx="253.63" cy="138.29" r="9.42"
+            style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; transform-origin: 253.63px 138.29px;"
+            id="elhsqqvpdth9" class="animable"></circle>
+        </g>
+        <g id="freepik--Shadow--inject-33" class="animable" style="transform-origin: 202.78px 423.09px;">
+          <ellipse cx="202.78" cy="423.09" rx="87.15" ry="12.62"
+            style="fill: rgb(50, 153, 168); transform-origin: 202.78px 423.09px;" id="el9dq7li4xmp" class="animable">
+          </ellipse>
+          <g id="ellivj7sqemi">
+            <ellipse cx="202.78" cy="423.09" rx="87.15" ry="12.62"
+              style="fill: rgb(255, 255, 255); opacity: 0.5; transform-origin: 202.78px 423.09px;" class="animable">
+            </ellipse>
+          </g>
+        </g>
+        <g id="freepik--Character--inject-33" class="animable" style="transform-origin: 207.14px 308.803px;">
+          <path d="M240.49,346.13a1,1,0,0,1-1-1V287.29a1,1,0,1,1,2,0v57.84A1,1,0,0,1,240.49,346.13Z"
+            style="fill: rgb(38, 50, 56); transform-origin: 240.49px 316.21px;" id="elqd6tsb8f02" class="animable">
+          </path>
+          <path d="M240.49,298.58a1.5,1.5,0,0,1-1.5-1.5v-9.79a1.5,1.5,0,1,1,3,0v9.79A1.5,1.5,0,0,1,240.49,298.58Z"
+            style="fill: rgb(38, 50, 56); transform-origin: 240.49px 292.185px;" id="elj4k07q5208" class="animable">
+          </path>
+          <path d="M238.08,346.13a1,1,0,0,1-1-1V287.29a1,1,0,0,1,2,0v57.84A1,1,0,0,1,238.08,346.13Z"
+            style="fill: rgb(38, 50, 56); transform-origin: 238.08px 316.21px;" id="elkxiwzaqvm2c" class="animable">
+          </path>
+          <path d="M238.08,298.58a1.5,1.5,0,0,1-1.5-1.5v-9.79a1.5,1.5,0,0,1,3,0v9.79A1.5,1.5,0,0,1,238.08,298.58Z"
+            style="fill: rgb(38, 50, 56); transform-origin: 238.08px 292.185px;" id="elbvrujn04npn" class="animable">
+          </path>
+          <polygon points="240.49 285.79 238.08 285.79 238.08 288.72 240.47 288.72 240.49 285.79"
+            style="fill: rgb(38, 50, 56); transform-origin: 239.285px 287.255px;" id="elv2xkzytwwdk" class="animable">
+          </polygon>
+          <rect x="238.85" y="415.22" width="2.34" height="4.84"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 240.02px 417.64px;"
+            id="elhx34c0k74ja" class="animable"></rect>
+          <rect x="255.37" y="415.22" width="2.34" height="4.84"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 256.54px 417.64px;"
+            id="eljxbrz3e2p0k" class="animable"></rect>
+          <rect x="245.69" y="415.22" width="2.34" height="4.84"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 246.86px 417.64px;"
+            id="elc8rwtn1svfs" class="animable"></rect>
+          <rect x="262.22" y="415.22" width="2.34" height="4.84"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 263.39px 417.64px;"
+            id="el3zwbw86jt4u" class="animable"></rect>
+          <rect x="235" y="337.34" width="33.33" height="78" rx="5.33"
+            style="fill: rgb(255, 255, 255); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 251.665px 376.34px;"
+            id="elr6axq0b1s8d" class="animable"></rect>
+          <rect x="254.67" y="337.34" width="13.67" height="78" rx="5.33"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 261.505px 376.34px;"
+            id="eldch3fcyndos" class="animable"></rect>
+          <path d="M250.58,337.34a5.33,5.33,0,0,0-5.33,5.34V410a6.41,6.41,0,0,0,3.81,5.28"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 247.915px 376.31px;"
+            id="eliuplb77euei" class="animable"></path>
+          <path
+            d="M167.15,336.75s3.62,8.93,3,16.79-3,20.61-1.28,25.93,5.53,26.47,5.53,26.47-1.91,2.12-1.91,4,.64,11.47.64,11.47h1.27l1.28-9.56a3.75,3.75,0,0,1,2.12,2.55c.21,1.7.85,6.59,1.7,6.8a15.55,15.55,0,0,0,3.19,0s1.27-.85.64-1.49a5.35,5.35,0,0,1-1.7-3.18c-.43-1.92-1.49-4.68-1.49-8.29v-32c0-9.35,1.27-16.58,1.7-24.87a78.54,78.54,0,0,0-.43-14Z"
+            style="fill: rgb(255, 255, 255); transform-origin: 175.328px 379.08px;" id="elxf2e74trhhq" class="animable">
+          </path>
+          <g style="clip-path: url(&quot;#freepik--clip-path--inject-33&quot;); transform-origin: 174.725px 340.93px;"
+            id="el2fe68pjcef2" class="animable">
+            <path d="M167.56,337.85a50.09,50.09,0,0,1,1.75,6.16h12.58c-.09-3.09-.33-5.27-.44-6.16Z"
+              style="fill: rgb(50, 153, 168); transform-origin: 174.725px 340.93px;" id="elq6gho89yfdf"
+              class="animable"></path>
+            <g id="eljl04qyppyrs">
+              <path d="M167.56,337.85a50.09,50.09,0,0,1,1.75,6.16h12.58c-.09-3.09-.33-5.27-.44-6.16Z"
+                style="fill: rgb(255, 255, 255); opacity: 0.5; transform-origin: 174.725px 340.93px;" class="animable">
+              </path>
+            </g>
+          </g>
+          <path
+            d="M167.15,336.75s3.62,8.93,3,16.79-3,20.61-1.28,25.93,5.53,26.47,5.53,26.47-1.91,2.12-1.91,4,.64,11.47.64,11.47h1.27l1.28-9.56a3.75,3.75,0,0,1,2.12,2.55c.21,1.7.85,6.59,1.7,6.8a15.55,15.55,0,0,0,3.19,0s1.27-.85.64-1.49a5.35,5.35,0,0,1-1.7-3.18c-.43-1.92-1.49-4.68-1.49-8.29v-32c0-9.35,1.27-16.58,1.7-24.87a78.54,78.54,0,0,0-.43-14Z"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 175.328px 379.08px;"
+            id="elg90360d8ds" class="animable"></path>
+          <path
+            d="M179.62,421.3h-3.19s-1-.08-1.12-3.93a30.41,30.41,0,0,0-.76-6.16A3.56,3.56,0,0,1,178,412c1.74,1.47,2.16,7.28,2.37,8a3.64,3.64,0,0,0,.63,1.27Z"
+            style="fill: rgb(255, 255, 255); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 177.775px 416.178px;"
+            id="elgfhdp2uqmt6" class="animable"></path>
+          <path
+            d="M181.61,416.57a50,50,0,0,1-1.33-5.87,19.49,19.49,0,0,0-1.44-3.49c-1.48-2.55-4.46-1.27-4.46-1.27s-1.91,2.12-1.91,4,.64,11.47.64,11.47h1.27l1.28-9.56a3.75,3.75,0,0,1,2.12,2.55c.21,1.7.85,6.59,1.7,6.8a15.55,15.55,0,0,0,3.19,0s1.27-.85.64-1.49A5.35,5.35,0,0,1,181.61,416.57Z"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 177.978px 413.514px;"
+            id="eli3tmw77al4" class="animable"></path>
+          <path
+            d="M187.61,338.09s2,6.18,1.64,9.09-9.82,11.81-10.91,17.09-3.64,17.27-4.54,22.36-1.66,8.09-3.2,9.46-4.37.11-6.51,2.54-8.4,9.9-8.4,9.9l.87.77,7.35-4.49s3.39,1.29,3.46,3.29a53.37,53.37,0,0,0,1.16,8.26c.45,1.67,3.54,4.94,5.52,5.42s1.93-2,1.14-2.47-1.92-3-1.74-6.12,1.43-12.3,2.65-14.42,12.06-25,17.69-32.32,7.45-14,8.73-15.82,1.27-6.18,1.27-8.54a27.56,27.56,0,0,0-.36-4.36Z"
+            style="fill: rgb(255, 255, 255); transform-origin: 179.74px 379.786px;" id="elf9030ephsl" class="animable">
+          </path>
+          <g style="clip-path: url(&quot;#freepik--clip-path-2--inject-33&quot;); transform-origin: 195.69px 340.93px;"
+            id="el0vj29r0jein" class="animable">
+            <path
+              d="M187.61,338.09a45.51,45.51,0,0,1,1.45,5.92h14.71c0-.71,0-1.37,0-1.92a28.45,28.45,0,0,0-.34-4.24h-5.32Z"
+              style="fill: rgb(50, 153, 168); transform-origin: 195.69px 340.93px;" id="elyg3w843jenb" class="animable">
+            </path>
+            <g id="eldyum579i4bp">
+              <path
+                d="M187.61,338.09a45.51,45.51,0,0,1,1.45,5.92h14.71c0-.71,0-1.37,0-1.92a28.45,28.45,0,0,0-.34-4.24h-5.32Z"
+                style="fill: rgb(255, 255, 255); opacity: 0.5; transform-origin: 195.69px 340.93px;" class="animable">
+              </path>
+            </g>
+          </g>
+          <path
+            d="M187.61,338.09s2,6.18,1.64,9.09-9.82,11.81-10.91,17.09-3.64,17.27-4.54,22.36-1.66,8.09-3.2,9.46-4.37.11-6.51,2.54-8.4,9.9-8.4,9.9l.87.77,7.35-4.49s3.39,1.29,3.46,3.29a53.37,53.37,0,0,0,1.16,8.26c.45,1.67,3.54,4.94,5.52,5.42s1.93-2,1.14-2.47-1.92-3-1.74-6.12,1.43-12.3,2.65-14.42,12.06-25,17.69-32.32,7.45-14,8.73-15.82,1.27-6.18,1.27-8.54a27.56,27.56,0,0,0-.36-4.36Z"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 179.74px 379.786px;"
+            id="elyeuqqu3ca8" class="animable"></path>
+          <path
+            d="M163.91,404.81s1.58,4.28,1.45,6.46-1.12,3.75-.13,5.45,2.68,4.16,8.82,5.06c0,0-3.15-5.46-3.3-9.11s-.74-9.33-2.54-9.8S164.05,402.45,163.91,404.81Z"
+            style="fill: rgb(255, 255, 255); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 168.98px 412.208px;"
+            id="elk67g4wtbru" class="animable"></path>
+          <path
+            d="M175.19,419.31c-.79-.43-1.92-3-1.74-6.12-2.38-3.05-1-7.53-2.64-11.08a11.37,11.37,0,0,0-4.09-5l0,0a4.67,4.67,0,0,0-2.6,1.51c-2.15,2.42-8.4,9.9-8.4,9.9l.87.77,7.35-4.49s3.39,1.29,3.46,3.29a53.37,53.37,0,0,0,1.16,8.26c.45,1.67,3.54,4.94,5.52,5.42S176,419.73,175.19,419.31Z"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 165.72px 409.47px;"
+            id="elkimvgtjwf3d" class="animable"></path>
+          <path
+            d="M160.78,233.68a28.92,28.92,0,0,0-4,7.65c-1.27,4-12.54,35.28-10.62,37.19s21.25,8.07,21.25,8.07l3.19-8.71-11.27-5.31,7-22.53S168.22,236.65,160.78,233.68Z"
+            style="fill: rgb(50, 153, 168); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 158.27px 260.135px;"
+            id="elj2uhpbona6g" class="animable"></path>
+          <path d="M150.65,278c4.53-.55,8.64-5.4,8.64-5.4a10.5,10.5,0,0,1-2.06,6.54"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 154.972px 275.87px;"
+            id="ellcvsll6nn5" class="animable"></path>
+          <path d="M163.53,257.08s-1.72-1.43-5.16-8.88"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 160.95px 252.64px;"
+            id="el0kb3i1bl6qk" class="animable"></path>
+          <path d="M163.24,258.51a101.11,101.11,0,0,1-9.44-4.87"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 158.52px 256.075px;"
+            id="elvdm6g9mo3v" class="animable"></path>
+          <path
+            d="M169.49,279.16s-5.1,8.5-8.5,25.5a138,138,0,0,0-1.91,34.21s19.55,4.26,54.19,0c0,0-3.4-42.92-16.15-59.71Z"
+            style="fill: rgb(50, 153, 168); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 186.012px 309.962px;"
+            id="eln0nukngvqim" class="animable"></path>
+          <path
+            d="M158.76,330.71c0,5,.32,8.16.32,8.16s19.55,4.26,54.19,0c0,0-.25-3.18-.87-8.15C183.3,333.71,164.62,331.58,158.76,330.71Z"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 186.015px 335.737px;"
+            id="ely0w9z5qkafr" class="animable"></path>
+          <path
+            d="M172,229.85s-9.56,2.34-11.26,3.83-.85,9.35.21,14.45,8.5,31,8.5,31h27.63s6.38-41.66,6.16-45.27-17.21-5.95-17.21-5.95Z"
+            style="fill: rgb(50, 153, 168); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 181.51px 253.52px;"
+            id="el6mi1is9p0j3" class="animable"></path>
+          <path d="M167.62,272.57l1.87,6.59h27.63s.4-2.62,1-6.59Z"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 182.87px 275.865px;"
+            id="elxiwy7xi095" class="animable"></path>
+          <path
+            d="M228.06,280.74a12.11,12.11,0,0,0,3.44.94c1.25,0,5.48-1.88,7.2-1.57s5.16,5.79,5.63,6.57-1.81,1.49-2.66,2.19c-1.42,1.18-2.69.1-2.5-.47l.31-1.25s-1.4-.86-2.35,0a6.38,6.38,0,0,1-4.22,1.56c-1.88,0-5.94-2.81-5.94-2.81Z"
+            style="fill: rgb(255, 255, 255); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 235.682px 284.737px;"
+            id="elslc6md143bp" class="animable"></path>
+          <path
+            d="M195.42,258.54s.85,16.58,1.91,18.28,12.75,7,18.49,8.71a75.49,75.49,0,0,0,11.69,2.34l1.7-7.65s-14.66-8.08-17.64-10-4.89-3.4-4.89-3.4-.85-22.53-1.06-26.78-.21-6.37-2.12-7.44a35.53,35.53,0,0,0-6.38-2.12"
+            style="fill: rgb(50, 153, 168); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 212.315px 259.175px;"
+            id="el9wluc8bntz" class="animable"></path>
+          <path d="M201.59,272.82c3.15-1.72,5.09-6,5.09-6s-5.09,2.84-9.1,1.12"
+            style="fill: none; stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 202.13px 269.82px;"
+            id="elcctzso3i12m" class="animable"></path>
+          <path
+            d="M178.27,197.55a11.3,11.3,0,0,0-7.86,8.29c-1.92,7-.43,14-.43,16.57s-1.49,13.82-3,21.89-3.61,17.22-3.61,17.22,6.17,1.48,9.14,1.91l6.16.85,1.07-5.1.85,5.31a47.2,47.2,0,0,0,6.16,0,20.91,20.91,0,0,0,7.23-1.91l.21-2.76,2.12,2.33a24.58,24.58,0,0,0,3.62-1.27c1.91-.85,4.88-2.55,4.88-2.55s-10.2-25.5-11.47-30.82,1.06-8.28,1.91-14.87-3.61-16.15-7-16.79a6.09,6.09,0,0,0-5.53,1.91A5.14,5.14,0,0,0,178.27,197.55Z"
+            style="fill: rgb(38, 50, 56); stroke: rgb(38, 50, 56); stroke-linecap: round; stroke-linejoin: round; transform-origin: 184.09px 230.177px;"
+            id="elgkeauklleig" class="animable"></path>
+        </g>
+        <defs>
+          <filter id="active" height="200%">
+            <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"></feMorphology>
+            <feFlood flood-color="#32DFEC" flood-opacity="1" result="PINK"></feFlood>
+            <feComposite in="PINK" in2="DILATED" operator="in" result="OUTLINE"></feComposite>
+            <feMerge>
+              <feMergeNode in="OUTLINE"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <filter id="hover" height="200%">
+            <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"></feMorphology>
+            <feFlood flood-color="#ff0000" flood-opacity="0.5" result="PINK"></feFlood>
+            <feComposite in="PINK" in2="DILATED" operator="in" result="OUTLINE"></feComposite>
+            <feMerge>
+              <feMergeNode in="OUTLINE"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+            <feColorMatrix type="matrix"
+              values="0   0   0   0   0                0   1   0   0   0                0   0   0   0   0                0   0   0   1   0 ">
+            </feColorMatrix>
+          </filter>
+        </defs>
+        <defs>
+          <clipPath id="freepik--clip-path--inject-33">
+            <path
+              d="M167.15,336.75s3.62,8.93,3,16.79-3,20.61-1.28,25.93,5.53,26.47,5.53,26.47-1.91,2.12-1.91,4,.64,11.47.64,11.47h1.27l1.28-9.56a3.75,3.75,0,0,1,2.12,2.55c.21,1.7.85,6.59,1.7,6.8a15.55,15.55,0,0,0,3.19,0s1.27-.85.64-1.49a5.35,5.35,0,0,1-1.7-3.18c-.43-1.92-1.49-4.68-1.49-8.29v-32c0-9.35,1.27-16.58,1.7-24.87a78.54,78.54,0,0,0-.43-14Z"
+              style="fill:#fff;stroke:#263238;stroke-linecap:round;stroke-linejoin:round"></path>
+          </clipPath>
+          <clipPath id="freepik--clip-path-2--inject-33">
+            <path
+              d="M187.61,338.09s2,6.18,1.64,9.09-9.82,11.81-10.91,17.09-3.64,17.27-4.54,22.36-1.66,8.09-3.2,9.46-4.37.11-6.51,2.54-8.4,9.9-8.4,9.9l.87.77,7.35-4.49s3.39,1.29,3.46,3.29a53.37,53.37,0,0,0,1.16,8.26c.45,1.67,3.54,4.94,5.52,5.42s1.93-2,1.14-2.47-1.92-3-1.74-6.12,1.43-12.3,2.65-14.42,12.06-25,17.69-32.32,7.45-14,8.73-15.82,1.27-6.18,1.27-8.54a27.56,27.56,0,0,0-.36-4.36Z"
+              style="fill:#fff;stroke:#263238;stroke-linecap:round;stroke-linejoin:round"></path>
+          </clipPath>
+        </defs>
+      </svg>
+      <!-- animation end -->
+    </div>
+
+    <div class="content">
+      <h3>why choose us?</h3>
+      <p>
+        Make <span style="color: #3299a8;">AIRWEB</span> your travel companion to not only fly on-time but to also enjoy
+        hassle-free and courteous service on board and beyond. On making a flight booking directly with us, you can
+        enjoy the lowest booking and cancellation fee, exclusive flight offers and add-ons, along with a personalised
+        and smooth experience. You can also download the app to make and manage your bookings on the go.
+      </p>
+      <p>
+        AirWeb is not only the most efficient low fare operator domestically but is also comparable with global low cost
+        airlines. We are constantly enhancing our engagement with our passengers to augment their travel experience.
+        From multichannel direct sales (including online flight booking, call centers and airport counters), to online
+        flight status checking, an exclusive IndiGo app for Android, we have transformed air travel in India. Today, we
+        are India's most preferred airline. At IndiGo, low fares come with high quality.
+      </p>
+      <a href="#"> <button class="btn">learn more</button> </a>
+    </div>
+  </section>
+  <!-- about section end -->
+  <!-- features section starts  -->
+
+  <section class="features" id="features">
+
+    <h1 class="heading"> Our Services </h1>
+
+    <div class="box-container">
+
+      <div class="box">
+        <img src="{% static 'Images/Flight Booking-pana.png'%}" alt="">
+        <h3>Book A flight</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus recusandae autem, repellendus fugit
+          quaerat provident voluptatum non officiis ratione.</p>
+        <a href="#" class="btn">read more</a>
+      </div>
+
+      <div class="box">
+        <img src="{% static 'Images/Flight Booking-pana.png' %}" alt="">
+        <h3>Book A flight</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus recusandae autem, repellendus fugit
+          quaerat provident voluptatum non officiis ratione.</p>
+        <a href="#" class="btn">read more</a>
+      </div>
+
+      <div class="box">
+        <img src="{% static 'Images/Flight Booking-pana.png' %}" alt="">
+        <h3>Book A flight</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus recusandae autem, repellendus fugit
+          quaerat provident voluptatum non officiis ratione.</p>
+        <a href="#" class="btn">read more</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- features section ends -->
+
+  <!-- teacher section starts -->
+
+  <!-- team section starts  -->
+
+  <section id="team" class="team">
+
+    <h1 class="heading">Developers team</h1>
+
+    <div class="row">
+
+      <div class="card">
+        <div class="image">
+          <img src="{%  static  'Images/man__avatar__male__professional__human-512.png'  %}" alt="">
+        </div>
+        <div class="info">
+          <h3>Mudit Jindal</h3>
+          <span>web designer</span>
+          <div class="icons">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image">
+          <img src="{%  static  'Images/137-1370168_professional-clipart-female-avatar-circle-hd-png-download.png'  %}"
+            alt="">
+        </div>
+        <div class="info">
+          <h3>Mahima Khatri</h3>
+          <span>web designer</span>
+          <div class="icons">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image">
+          <img src="{%  static  'Images/137-1370168_professional-clipart-female-avatar-circle-hd-png-download.png'  %}"
+            alt="">
+        </div>
+        <div class="info">
+          <h3>Charvy Gugalia</h3>
+          <span>web designer</span>
+          <div class="icons">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- team section ends -->
+
+  <!-- experts section ends -->
+
+  <!-- teacher section ends -->
+
+  <!-- contact section starts -->
+
+  <section class="contact" id="contact">
+    <h1 class="heading">contact us</h1>
+
+    <div class="row">
+      <form action="">
+        <input type="text" placeholder="full name" class="box" />
+        <input type="email" placeholder="your email" class="box" />
+        <input type="password" placeholder="full password" class="box" />
+        <input type="number" placeholder="full number" class="box" />
+        <textarea name="" id="" cols="30" rows="10" class="box address" placeholder="your address"></textarea>
+        <input type="submit" class="btn" value="send now" />
+      </form>
+
+      <div class="image">
+        <img src="{%  static  'Images/Contact us-amico.svg'  %}" alt="" srcset="" />
+      </div>
+    </div>
+  </section>
+  <!-- contact section ends -->
+  <!-- footer section starts -->
+  <div class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>branch locations</h3>
+        <a href="#">India</a>
+        <a href="#">USA</a>
+        <a href="#">UK</a>
+        <a href="#">Australia</a>
+        <a href="#">South Africa</a>
+      </div>
+
+      <div class="box">
+        <h3>Quick links</h3>
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">Book</a>
+        <a href="#">Developers</a>
+        <a href="#">contact us</a>
+      </div>
+
+      <div class="box">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i>mumbai, india 400104</p>
+        <p><i class="fas fa-envelope"></i>ma.....@gmail.com</p>
+        <p><i class="fas fa-phone"></i>+91-xxxxxxxxxxx</p>
+      </div>
+    </div>
+    <!-- credits -->
+    <h1 class="credit">
+      created by <a href="#">Pokemon</a> All Rights Reserved
+    </h1>
+  </div>
+  <!-- footer section ends -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="{% static 'main.js' %}"></script>
+</body>
+
+</html>

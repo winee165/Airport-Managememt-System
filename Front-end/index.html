@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +18,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/Front-end/style.css" />
+    <link rel="stylesheet" href="{%  static  'css/style.css'  %}" />
   </head>
   <body>
     <header>
@@ -44,10 +45,11 @@
 
     <!-- login form section -->
     <div class="login-form">
-      <form action="">
+      <form id="login-form" method="post">
+        {% csrf_token %}
         <h3>Login</h3>
-        <input type="email" placeholder="username" class="box" />
-        <input type="password" placeholder="password" class="box" />
+        <input type="text" placeholder="username" class="box" id="id_username" name="username"/>
+        <input type="password" placeholder="password" class="box" id="id_password" name="password"/>
         <p>Forget password? <a href="#">Click Here</a></p>
         <p>Don't have an account ? <a href="#">Register Now</a></p>
         <input type="submit" class="btn" value="login" />
@@ -96,39 +98,39 @@
     <div class="box-container">
 
       <div class="box">
-        <img src="/Front-end/Images/Flight Booking-pana.png" alt="">
+        <img src="{% static 'Images/Flight Booking-pana.png'%}" alt="">
         <h3>Flight</h3>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus recusandae autem, repellendus fugit quaerat provident voluptatum non officiis ratione.</p>
         <a href="/Front-end/Flight/flight.html" class="btn">learn more</a>
     </div>
 
     <div class="box">
-        <img src="/Front-end/Images/Flight Booking-pana.png" alt="">
+        <img src="{% static 'Images/Flight Booking-pana.png' %}" alt="">
         <h3>Airport</h3>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus recusandae autem, repellendus fugit quaerat provident voluptatum non officiis ratione.</p>
         <a href="/Front-end/Airport/airport.html" class="btn">learn more</a>
     </div>
 
     <div class="box">
-        <img src="/Front-end/Images/Flight Booking-pana.png" alt="">
+        <img src="{% static 'Images/Flight Booking-pana.png' %}" alt="">
         <h3>Flight Company</h3>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus recusandae autem, repellendus fugit quaerat provident voluptatum non officiis ratione.</p>
         <a href="/Front-end/Flight-Company/flightc.html" class="btn">learn more</a>
     </div>
     <div class="box">
-      <img src="/Front-end/Images/Flight Booking-pana.png" alt="">
+      <img src="{% static 'Images/Flight Booking-pana.png' %}" alt="">
       <h3>Booking Agent</h3>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus recusandae autem, repellendus fugit quaerat provident voluptatum non officiis ratione.</p>
       <a href="/Front-end/Booking-Agent/booking-agent.html" class="btn">learn more</a>
   </div>
   <div class="box">
-    <img src="/Front-end/Images/undraw_stranded_traveler_pdbw.png" alt="">
+    <img src="{% static 'Images/undraw_stranded_traveler_pdbw.png' %}" alt="">
     <h3>Supplier</h3>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus recusandae autem, repellendus fugit quaerat provident voluptatum non officiis ratione.</p>
     <a href="/Front-end/Supplier/supplier.html" class="btn">learn more</a>
 </div>
 <div class="box">
-  <img src="/Front-end/Images/Flight Booking-pana.png" alt="">
+  <img src="{% static 'Images/Flight Booking-pana.png' %}" alt="">
   <h3>Ticket</h3>
   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam minus recusandae autem, repellendus fugit quaerat provident voluptatum non officiis ratione.</p>
   <a href="/Front-end/Ticket/ticket.html" class="btn">learn more</a>
@@ -150,7 +152,7 @@
     
     <div class="card">
       <div class="image">
-        <img src="/Front-end/Images/man__avatar__male__professional__human-512.png" alt="">
+        <img src="{%  static  'Images/man__avatar__male__professional__human-512.png'  %}" alt="">
       </div>
       <div class="info">
         <h3>Mudit Jindal</h3>
@@ -165,7 +167,7 @@
     
     <div class="card">
       <div class="image">
-        <img src="/Front-end/Images/137-1370168_professional-clipart-female-avatar-circle-hd-png-download.png" alt="">
+        <img src="{%  static  'Images/137-1370168_professional-clipart-female-avatar-circle-hd-png-download.png'  %}" alt="">
       </div>
       <div class="info">
         <h3>Mahima Khatri</h3>
@@ -180,7 +182,7 @@
     
     <div class="card">
       <div class="image">
-        <img src="/Front-end/Images/137-1370168_professional-clipart-female-avatar-circle-hd-png-download.png" alt="">
+        <img src="{%  static  'Images/137-1370168_professional-clipart-female-avatar-circle-hd-png-download.png'  %}" alt="">
       </div>
       <div class="info">
         <h3>Charvy Gugalia</h3>
@@ -229,7 +231,7 @@
         </form>
 
         <div class="image">
-          <img src="/Front-end/Images/Contact us-amico.png" alt="" srcset="" />
+          <img src="{%  static  'Images/Contact us-amico.svg'  %}" alt="" srcset="" />
         </div>
       </div>
     </section>
@@ -270,6 +272,6 @@
     <!-- footer section ends -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/Front-end/main.js"></script>
+    <script src="{% static 'main.js' %}"></script>
   </body>
 </html>

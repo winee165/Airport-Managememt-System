@@ -232,7 +232,7 @@ header #menu {
     /* align-items: center; */
     justify-content: center;
     flex-flow: column; 
-    background: url(../Images/254367.png) no-repeat;
+    background: url(/Front-end/Images/254367.png) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
